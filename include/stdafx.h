@@ -5,8 +5,8 @@
 #include <definitions.h>
 
 // System headers required in headers should be included here.
-#include <Wire.h>
 #include <Arduino.h>
+#include <Wire.h>
 #include <Adafruit_NeoPixel.h>
 
 // GPIO Config should be global.
