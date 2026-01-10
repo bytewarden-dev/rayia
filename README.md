@@ -1,4 +1,4 @@
-# The VibeRay
+# The Rayia Controller
 
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/bytewarden-dev/vibe-ray/main.yml?logo=github&style=flat-square)
