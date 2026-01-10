@@ -42,10 +42,14 @@ void StateMachine::update() {
   strip.setBrightness(brightness);
 
   // Sprawdzanie, czy nastąpiła zmiana stanu
-  if (stateChanged) {
-    stateChanged = false; // Reset flagi
+  /**
+   *  
+   
+  if (stateNext) {
+    stateNext = false;    // Reset flagi
     nextState();          // Przejście do następnego stanu
   }
+    */
 }
 
 // Zmiana stanu na kolejny

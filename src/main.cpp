@@ -6,6 +6,7 @@ StateMachine state;
 
 void setup()
 {
+  init_serial();
 	Serial.println(OXY_COMPILER);
 
 

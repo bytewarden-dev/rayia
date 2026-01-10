@@ -8,11 +8,12 @@ static constexpr auto STATUS_VERSION = "2.2";
 static constexpr auto STATUS_DEVELOPERS = "The Duwles AVR";
 #define __FIRMWARE_VERSION__            "2.2.7811"
 
-// ==========================
-// Wykrywanie kompilatora
-// ==========================
+// ============================
+//    Wykrywanie kompilatora
+// ============================
 //
 #ifndef OXY_COMPILER
+
 #if defined(__clang__)
     #define OXY_COMPILER "Clang version: " __clang_version__
 #elif defined(__GNUC__)
@@ -24,11 +25,12 @@ static constexpr auto STATUS_DEVELOPERS = "The Duwles AVR";
 #else
     #define OXY_COMPILER "Unknown compiler"
 #endif
+
 #endif // !OXY_COMPILER
 
-// ==========================
-//	 Wykrywanie standardu C++
-// ==========================
+// ==============================
+//	  Wykrywanie standardu C++
+// ==============================
 //
 #ifndef __STDCPP_V__
 #if __cplusplus == 199711L

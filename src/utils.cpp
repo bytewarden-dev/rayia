@@ -47,11 +47,6 @@ void init_serial() {
 //
 void init_strip() {
     strip.begin();
-    strip.setBrightness(86);
     strip.show();
 }
 
-
-void init_uart() {
-
-}
