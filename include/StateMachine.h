@@ -5,10 +5,11 @@
 
 
 enum State {
-    STATIC,
     AURORA,
+    STATIC,
     RAINBOW,
-    OFF
+    OFF,
+    TOTAL_STATES
 };
 
 
