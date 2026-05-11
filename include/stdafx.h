@@ -11,11 +11,9 @@
 
 // GPIO Config should be global.
 #include <config.h>
-#include <utils.h>
+#include <common.h>
+//#include <utils.h>
 
-// Deklaracja globalnego obiektu Adafruit_NeoPixel
 extern Adafruit_NeoPixel strip;
-
-
 
 #endif // !__STDAFX_H__

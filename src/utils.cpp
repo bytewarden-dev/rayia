@@ -1,12 +1,10 @@
 #include <utils.h>
 
 
-// Funkcja do ustawiania koloru na wszystkich diodach
-void setAllLEDs(uint8_t red, uint8_t green, uint8_t blue) {
-  for (int i = 0; i < NUM_LEDS; i++) {
-    strip.setPixelColor(i, strip.Color(red, green, blue));
-  }
-  strip.show(); // Wyślij dane do WS2812
+void bootstrap() {
+  strip.begin();
+  strip.show(); 
+    
 }
 
 // Efekt tęczy rozchodzącej się od środka
@@ -30,23 +28,19 @@ void rainbowFromCenter(uint8_t wait) {
   }
 }
 
+
 // Just to know which program is running on my Arduino
+/**
 void init_serial() {
 		Wire.begin();
     Serial.begin(9600);
     delay(100);
 	  Serial.println(F("UART_Init(); Serial begin with baudrate: 9600\n\n"));
-    /***
+    
     Serial.println(F("START " __FILE__ " from " __DATE__ "\r\nUsing firmware version: " __FIRMWARE_VERSION__));
-    */
+    
 
     Serial.println(F("[AVR] DriverLED [Version " __FIRMWARE_VERSION__ "]"));
     Serial.println(F("Compiled with " OXY_COMPILER ", " __STDCPP_V__ ". Date " __DATE__ __TIME__ "\n\n"));
 }
-
-//
-void init_strip() {
-    strip.begin();
-    strip.show();
-}
-
+*/

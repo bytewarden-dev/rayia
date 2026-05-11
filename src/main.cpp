@@ -1,27 +1,17 @@
 #include <stdafx.h>
+#include <utils.h>
 #include <StateMachine.h>
+#include <LightController.h>
 
-StateMachine state;
+Adafruit_NeoPixel strip(NUM_LEDS, DO_PIN, NEO_GRB + NEO_KHZ800);
 
 
 void setup()
 {
-  Wire.begin();
-  Serial.begin(9600);
-  while (!Serial);
-
-  Serial.println("\nI2C Scanner");
-	Serial.println(OXY_COMPILER);
-
-
-	init_strip();
-
-
-	state.begin();
+  bootstrap();
 }
 
 
 void loop()
 {
-	state.handle();
 }

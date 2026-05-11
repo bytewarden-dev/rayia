@@ -3,12 +3,7 @@
 
 #include <stdafx.h>
 
-
-void init_serial();
-
-void init_strip();
-
+void bootstrap();
 void rainbowFromCenter(uint8_t wait);
 
-void setAllLEDs(uint8_t red, uint8_t green, uint8_t blue);
 #endif

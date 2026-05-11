@@ -2,11 +2,11 @@
 #include <utils.h>
 
 // Konstruktor
-StateMachine::StateMachine() : currentState(OFF) {}
+StateMachine::StateMachine() : currentState(State_t::OFF) {}
 
 // Inicjalizacja
 void StateMachine::begin() {
-  setState(RAINBOW);
+  setState(State_t::RAINBOW);
 }
 
 void StateMachine::handle()
@@ -15,16 +15,19 @@ void StateMachine::handle()
 
   // Obsługa aktualnego stanu
   switch (currentState) {
-    case AURORA:
+    case State_t::AURORA:
       handleAurora();
       break;
-    case STATIC:
+    case State_t::BOOT:
+      handleBoot();
+      break;
+    case State_t::STATIC:
       handleStatic();
       break;
-    case OFF:
+    case State_t::OFF:
       handleOff();
       break;
-    case RAINBOW:
+    case State_t::RAINBOW:
       handleRainbow();
       break;
   }
@@ -54,19 +57,21 @@ void StateMachine::update() {
 
 // Zmiana stanu na kolejny
 void StateMachine::nextState() {
-  if (currentState == OFF) {
-    setState(STATIC);
-  } else if (currentState == STATIC) {
-    setState(RAINBOW);
-  } else if(currentState == RAINBOW) {
-    setState(AURORA);
-  } else if (currentState == AURORA) {
-    setState(OFF);
+  if (currentState == State_t::OFF) {
+    setState(State_t::STATIC);
+  } else if (currentState == State_t::STATIC) {
+    setState(State_t::RAINBOW);
+  } else if(currentState == State_t::RAINBOW) {
+    setState(State_t::AURORA);
+  } else if (currentState == State_t::AURORA) {
+    setState(State_t::OFF);
+  } else {
+    setState(State_t::STATIC); // Domyślnie przejdź do stanu STATIC
   }
 }
 
 // Zmiana stanu
-void StateMachine::setState(State state) {
+void StateMachine::setState(State_t state) {
   currentState = state;
 }
 
@@ -95,4 +100,9 @@ void StateMachine::handleOff() {
 
 void StateMachine::handleRainbow() {
   rainbowFromCenter(17);
+}
+
+
+void StateMachine::handleBoot() {
+  
 }

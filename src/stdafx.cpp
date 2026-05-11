@@ -1,5 +1,5 @@
+// stdafx.cpp : source file that includes just the standard includes
+// RayIA.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
 #include <stdafx.h>
 
-
-// Inicjalizacja paska LED
-Adafruit_NeoPixel strip(NUM_LEDS, DO_PIN, NEO_GRB + NEO_KHZ800);
