@@ -32,4 +32,7 @@ private:
     void nextState();
 };
 
+
+extern StateMachine stateMachine;
+
 #endif

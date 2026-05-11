@@ -2,9 +2,7 @@
 
 
 void bootstrap() {
-  strip.begin();
-  strip.show(); 
-    
+ 
 }
 
 // Efekt tęczy rozchodzącej się od środka

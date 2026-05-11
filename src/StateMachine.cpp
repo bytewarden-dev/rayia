@@ -104,5 +104,8 @@ void StateMachine::handleRainbow() {
 
 
 void StateMachine::handleBoot() {
-  
+  strip.begin();
+  strip.show(); 
+    
+  stateMachine.begin();
 }

@@ -4,6 +4,7 @@
 #include <LightController.h>
 
 Adafruit_NeoPixel strip(NUM_LEDS, DO_PIN, NEO_GRB + NEO_KHZ800);
+StateMachine stateMachine;
 
 
 void setup()
@@ -14,4 +15,6 @@ void setup()
 
 void loop()
 {
+  stateMachine.handle();
 }
+
